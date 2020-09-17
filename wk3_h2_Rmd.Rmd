@@ -1,0 +1,42 @@
+---
+title: "hw_9/16/20"
+author: "Suzanna Storms"
+date: "9/15/2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+## R Markdown
+```{r}
+setwd("/Users/suzannastorms/Desktop/2nd_year_PhD/CPSC_441")
+crop_yields <- read.csv("crop_yields.csv")
+```
+
+HW week 3:
+1. Write a function to calculate the mean
+
+```{r cars}
+   M = function(X) {M = sum(X)/length(X); M}
+```
+2. Find the range of the variable Year
+
+```{r}
+range(crop_yields$Year)
+```
+
+3.Using the function from #1, calculate the mean of the variable "Maize (tonnes per hectare)". 
+
+```{r}
+X = (crop_yields$Maize..tonnes.per.hectare.)
+
+M = function(X) {M = sum(X, na.rm = TRUE)/length(X); M}
+M(X)
+
+```
+ 4. Save a file with the variable named "Entity".
+
+Entity <- as.data.frame(crop_yields[,1], drop=false)
+write.csv(Entity,"/Users/suzannastorms/Desktop/2nd year PhD/CPSC_441/Entity.csv", row.names = FALSE)
+
